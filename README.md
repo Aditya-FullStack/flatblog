@@ -37,6 +37,25 @@ is disabled and shows a notice until you connect Supabase (next section).
 
 ---
 
+## Live preview
+
+A static build of this site is published on **GitHub Pages**:
+
+**https://aditya-fullstack.github.io/flatblog/**
+
+It runs in *demo mode* — bundled sample stories, sign-in disabled — so you can
+see the design and layout without a backend. To produce that build yourself:
+
+```bash
+PAGES_BASE_PATH=/flatblog npm run build:preview   # outputs ./out
+```
+
+The preview script temporarily moves the two server-only pieces (`middleware.js`
+and the `/auth/callback` route) out of the tree, builds a static export, and
+restores them. The normal `npm run build` is unaffected.
+
+---
+
 ## Connecting Supabase (the 10-minute walkthrough)
 
 ### 1. Create the project
