@@ -1,0 +1,15 @@
+import { updateSession } from '@/lib/supabase/middleware';
+
+export async function middleware(request) {
+  return await updateSession(request);
+}
+
+export const config = {
+  matcher: [
+    /*
+     * Run on everything except static assets and image optimisation,
+     * so the auth session is refreshed on every page/route request.
+     */
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)'
+  ]
+};

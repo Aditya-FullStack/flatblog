@@ -1,0 +1,20 @@
+{
+  "name": "flatblog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A blogger-style site built with Next.js, Supabase auth (Google + Facebook) and a Flat 2.0 / Material design system.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:preview": "node scripts/build-preview.mjs",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
